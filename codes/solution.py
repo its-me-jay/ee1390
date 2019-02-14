@@ -38,6 +38,24 @@ circle_x,circle_y=circle(c,r)
 plt.scatter(circle_x,circle_y)     #Plot corresponding to circle
 plt.scatter(c[0],c[1])
 
+#Substitute the center in the options given to check if any of them represents a diameter
+
+res=np.matmul(np.matrix([4,5]),c)-6
+if(int(res)==0):
+    print("Answer is option a")
+
+res=np.matmul(np.matrix([2,-3]),c)+10
+if(int(res)==0):
+    print("Answer is option b")
+
+res=np.matmul(np.matrix([3,4]),c)-3
+if(int(res)==0):
+    print("Answer is option c")
+
+res=np.matmul(np.matrix([5,2]),c)+4
+if(int(res)==0):
+    print("Answer is option d")
+
 y=[]
 for i in range(len(x)):
     y.append((6-4*x[i])/5)                   #Line segment corresponding to option a
@@ -57,6 +75,6 @@ y=[]
 for i in range(len(x)):
     y.append((-4-5*x[i])/2)
 plt.plot(x,y,label="option d")               #Line segment corresponding to option d
-plt.title("Option c is the answer")
+plt.title("Option b is the answer")
 plt.legend()
 plt.show()
